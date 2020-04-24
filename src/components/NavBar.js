@@ -6,15 +6,18 @@
  * Copyright (c) 2020 Gurubalan Harikrishnan
  */
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 function NavBar() {
     return (
         <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#">MovieDB</Navbar.Brand>
+            <Navbar.Brand href="/">MovieDB</Navbar.Brand>
             <Nav className="mr-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#features">Movies</Nav.Link>
-            <Nav.Link href="#pricing">Actors</Nav.Link>
+                {/* NOTE Since we are using React-bootstrap we have to pass in a prop to actually use the Link from react-router instead of react-bootstrap
+                , we can also solve this by installing react-router-bootstrap */}
+                <Nav.Link as={Link} to="/">Home</Nav.Link>
+                <Nav.Link as={Link} to="/movies">Movies</Nav.Link>
+                <Nav.Link as={Link} to="/actors">Actors</Nav.Link>
             </Nav>
         </Navbar>
     );
