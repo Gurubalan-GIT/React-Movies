@@ -7,6 +7,7 @@
  */
 import React, { Component } from 'react';
 import SearchField from './SearchField';
+import axios from 'axios';
 
 // ANCHOR Using class based components here to set default states through constructor and send props down the hierarchy.
 class Movies extends Component {
@@ -20,8 +21,8 @@ class Movies extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm}`)
-        .then(data => data.json())
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm}`)
+        .then(res => res.data)
         .then(data => {
             console.log(data);
             this.setState({ movies: [...data.results]})
