@@ -6,11 +6,12 @@
  * Copyright (c) 2020 Gurubalan Harikrishnan
  */
 import React, { Component } from 'react';
-import SearchField from './SearchField';
+import SearchField from '../SearchField';
 import axios from 'axios';
 import MovieGrid from './MovieGrid'
 
 // ANCHOR Using class based components here to set default states through constructor and send props down the hierarchy.
+// NOTE I'll be using function based components as well but with react hooks in other components.
 class Movies extends Component {
     constructor(){
         super();

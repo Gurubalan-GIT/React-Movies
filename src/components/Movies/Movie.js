@@ -7,7 +7,7 @@
  */
 import React from 'react';
 import {Col, Card, Button} from 'react-bootstrap';
-import '../styles/movie.css';
+import '../../styles/movie.css';
 import { Link } from 'react-router-dom';
 function Movie(props) {
     return (
