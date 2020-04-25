@@ -1,0 +1,19 @@
+/*
+ * Created Date: Saturday April 25th 2020
+ * Author: Gurubalan Harikrishnan
+ * Email-ID: gurubalan.work@gmail.com
+ * -----
+ * Copyright (c) 2020 Gurubalan Harikrishnan
+ */
+
+ .movie-card{
+    width: 15rem;
+    padding: 1px;
+    margin: 2px;
+    border-radius: 5px;
+ }
+
+ .movie-img{
+    width: 100%; 
+    height: 200px;
+ }
