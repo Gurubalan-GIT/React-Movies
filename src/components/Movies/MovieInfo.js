@@ -7,7 +7,7 @@
  */
 import React from 'react';
 import {Col, Container, Row, Image} from 'react-bootstrap';
-import '../../styles/movie.css'
+import '../../styles/component.css'
 function MovieInfo(props) {
     return (
         <div>

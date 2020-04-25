@@ -8,7 +8,7 @@
 import React from 'react';
 import {Col, Button ,Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import '../../styles/movie.css';
+import '../../styles/component.css';
 
 function Cast(props) {
     return (

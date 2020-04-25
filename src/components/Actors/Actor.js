@@ -9,7 +9,7 @@ import React from 'react';
 import {Col, Card, Button} from 'react-bootstrap';
 import '../../styles/component.css';
 import { Link } from 'react-router-dom';
-function Movie(props) {
+function Actor(props) {
     return (
         <Col sm={3}>
                 <Card className="movie-card">
@@ -17,16 +17,15 @@ function Movie(props) {
                         props.image == null? <Card.Img variant="top" src={`https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg`} className="movie-img" /> : <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w185${props.image}`} className="movie-img" />
                     }
                     <Card.Body>
-                        <Card.Title>{props.title}</Card.Title>
+                        <Card.Title>{props.name}</Card.Title>
                         <Card.Text>
-                            Rating : {props.rating} 
-                            {/* Date of release : {props.dateReleased} */}
+                            Known for : {props.role} 
                         </Card.Text>
-                        <Link to={`/movies/${props.id}`}><Button variant="info" size="sm">View more</Button></Link>
+                        <Link to={`/actors/${props.id}`}><Button variant="info" size="sm">View more</Button></Link>
                     </Card.Body>
                 </Card>          
         </Col>
     );
 }
 
-export default Movie;
+export default Actor;

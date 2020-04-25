@@ -7,7 +7,7 @@
  */
 import React from 'react';
 import {Container, Row} from 'react-bootstrap';
-import '../../styles/movie.css'
+import '../../styles/component.css'
 import Cast from './Cast.js'
 
 function CastInfo(props) {
