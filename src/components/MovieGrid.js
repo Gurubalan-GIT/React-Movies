@@ -11,17 +11,19 @@ import Movie from './Movie.js';
 function MovieGrid(props) {
     return (
         <div>
+            <br></br>
             <Container>
                 <Row>
                         {
                             props.movies.map((movie,i) => {
                                 return (
-                                    <Movie key={i} image={movie.poster_path}/>
+                                    <Movie key={i} image={movie.poster_path} title={movie.title} overview={movie.overview} rating={movie.vote_average} dateReleased={movie.release_date}/>
                                 )
                             })
                         }
                 </Row>
             </Container>
+            <br></br>
         </div>
     );
 }
