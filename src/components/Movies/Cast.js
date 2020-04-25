@@ -13,7 +13,6 @@ import '../../styles/component.css';
 function Cast(props) {
     return (
         <div className="cast-div card card-body bg-light">
-        
             <Col>
                 {   // NOTE The AWS link is actually a No Image found ( image ), this will come in place if there is not image available in the API
                     <Image alt="movie-img found" src={`https://image.tmdb.org/t/p/w185${props.cast.profile_path}`} roundedCircle className="cast-img"/>
@@ -25,7 +24,6 @@ function Cast(props) {
                 <p>{props.cast.character}</p>
                 <Link to={`/actors/${props.id}`}><Button variant="info" size="sm">Know more</Button></Link>
             </Col>
-    
         </div>
     );
 }
