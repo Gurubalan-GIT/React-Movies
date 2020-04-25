@@ -52,13 +52,12 @@ class Movies extends Component {
                             <Col md={{ span: 4, offset: 5 }}>
                                 <br></br>
                                 <br></br>
-                                <h5 className="search-text">Search Something.</h5> 
+                                <h5 className="search-text">Search Movies.</h5> 
                             </Col>
                         </Row>
                     </Container>
                    : <MovieGrid movies={this.state.movies}/>
                 }
-                <MovieGrid movies={this.state.movies}/>
             </div>
         );
     } 
