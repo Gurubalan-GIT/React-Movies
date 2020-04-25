@@ -8,6 +8,7 @@
 import React, { Component } from 'react';
 import SearchField from './SearchField';
 import axios from 'axios';
+import MovieGrid from './MovieGrid'
 
 // ANCHOR Using class based components here to set default states through constructor and send props down the hierarchy.
 class Movies extends Component {
@@ -36,6 +37,7 @@ class Movies extends Component {
         return (
             <div>
                 <SearchField handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+                <MovieGrid movies={this.state.movies}/>
             </div>
         );
     } 
