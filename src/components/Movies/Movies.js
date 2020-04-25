@@ -26,7 +26,6 @@ class Movies extends Component {
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm}`)
         .then(res => res.data)
         .then(data => {
-            console.log(data);
             this.setState({ movies: [...data.results]})
         })
     }

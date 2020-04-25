@@ -26,14 +26,12 @@ class MovieDetails extends Component {
         .then(res => res.data)
         .then(data => {
             this.setState({ movie: data})
-            console.log(data);
         })
 
         axios.get(`https://api.themoviedb.org/3/movie/${this.state.id}/credits?api_key=ccc7381861c0bec8c7d8aa25d848affb`)
         .then(res => res.data)
         .then(data => {
             this.setState({ casts: [...data.cast]})
-            console.log(data.cast);
         })
     }
 
@@ -44,11 +42,10 @@ class MovieDetails extends Component {
                     this.state && this.state.movie && <MovieInfo movie={this.state.movie}/>
                 }
                 <br></br>
-                <ul>
-                    {this.state && this.state.casts && this.state.casts.map(item =>
-                        <li key={item.id}>{item.name}</li>
-                    )}
-                </ul>
+                {
+                    this.state && this.state.casts && <CastInfo casts={this.state.casts}/>
+                }
+          
             </div>
         );
     }

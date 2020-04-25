@@ -6,7 +6,7 @@
  * Copyright (c) 2020 Gurubalan Harikrishnan
  */
 import React from 'react';
-import {Col, Container, Row} from 'react-bootstrap';
+import {Col, Container, Row, Image} from 'react-bootstrap';
 import '../../styles/movie.css'
 function MovieInfo(props) {
     return (
@@ -16,7 +16,7 @@ function MovieInfo(props) {
                 <Row>
                     <Col sm={6}>
                         {   // NOTE The AWS link is actually a No Image found ( image ), this will come in place if there is not image available in the API
-                            props.movie.poster_path == null? <img alt="No movie-img found" src={`https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg`} className="movie-info-img" /> : <img alt="movie-img found" src={`https://image.tmdb.org/t/p/w185${props.movie.poster_path}`} className="movie-info-img" />
+                            props.movie.poster_path == null? <Image alt="No movie-img found" src={`https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg`} className="movie-info-img" /> : <Image alt="movie-img found" src={`https://image.tmdb.org/t/p/w185${props.movie.poster_path}`} className="movie-info-img" />
                         }
                     </Col>
 
