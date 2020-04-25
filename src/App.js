@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar.js';
 import Movies from './components/Movies/Movies.js';
-import Actors from './components/Actors.js';
+import Actors from './components/Actors/Actors.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import MovieDetails from './components/Movies/MovieDetails.js'
