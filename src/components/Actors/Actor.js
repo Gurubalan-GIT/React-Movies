@@ -21,7 +21,7 @@ function Actor(props) {
                         <Card.Text>
                             Known for : {props.role} 
                         </Card.Text>
-                        <Link to={`/actors/${props.id}`}><Button variant="info" size="sm">View more</Button></Link>
+                        <Link to={`/actors/${props.id}`}><Button variant="info" size="sm">Know more</Button></Link>
                     </Card.Body>
                 </Card>          
         </Col>
