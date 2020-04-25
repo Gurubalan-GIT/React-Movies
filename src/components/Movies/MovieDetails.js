@@ -7,13 +7,15 @@
  */
 import React, {Component} from 'react';
 import axios from 'axios';
+import MovieInfo from './MovieInfo.js'
+import CastInfo from './CastInfo.js'
 
 class MovieDetails extends Component {
     constructor(props){
         super(props);
         this.state = {
             movie: {},
-            cast: [],
+            casts: [],
             id: props.match.params.id
         }
         this.apiKey = "ccc7381861c0bec8c7d8aa25d848affb";
@@ -30,7 +32,7 @@ class MovieDetails extends Component {
         axios.get(`https://api.themoviedb.org/3/movie/${this.state.id}/credits?api_key=ccc7381861c0bec8c7d8aa25d848affb`)
         .then(res => res.data)
         .then(data => {
-            this.setState({ cast: [...data.cast]})
+            this.setState({ casts: [...data.cast]})
             console.log(data.cast);
         })
     }
@@ -38,10 +40,12 @@ class MovieDetails extends Component {
     render() {
         return (
             <div>
-                <h2>{this.state.movie.original_title}</h2>
-                {console.log(this.state.cast)}
+                {
+                    this.state && this.state.movie && <MovieInfo movie={this.state.movie}/>
+                }
+                <br></br>
                 <ul>
-                    {this.state && this.state.cast && this.state.cast.map(item =>
+                    {this.state && this.state.casts && this.state.casts.map(item =>
                         <li key={item.id}>{item.name}</li>
                     )}
                 </ul>
