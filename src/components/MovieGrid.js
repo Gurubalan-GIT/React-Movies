@@ -6,7 +6,7 @@
  * Copyright (c) 2020 Gurubalan Harikrishnan
  */
 import React from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row} from 'react-bootstrap';
 import Movie from './Movie.js';
 function MovieGrid(props) {
     return (
