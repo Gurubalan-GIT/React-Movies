@@ -7,7 +7,8 @@
  */
 import React from 'react';
 import {Col, Card, Button} from 'react-bootstrap';
-import '../styles/movie.css'
+import '../styles/movie.css';
+import { Link } from 'react-router-dom';
 function Movie(props) {
     return (
         <Col sm={3}>
@@ -18,12 +19,10 @@ function Movie(props) {
                     <Card.Body>
                         <Card.Title>{props.title}</Card.Title>
                         <Card.Text>
-                            <p>Rating : {props.rating} 
-                            <br></br>
+                            Rating : {props.rating} 
                             {/* Date of release : {props.dateReleased} */}
-                            </p>
                         </Card.Text>
-                        <Button variant="info" size="sm">View more</Button>
+                        <Link to={`/movies/${props.id}`}><Button variant="info" size="sm">View more</Button></Link>
                     </Card.Body>
                 </Card>          
         </Col>
