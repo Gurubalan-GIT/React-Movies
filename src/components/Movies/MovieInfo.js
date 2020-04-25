@@ -10,9 +10,9 @@ import {Col, Container, Row, Image} from 'react-bootstrap';
 import '../../styles/component.css'
 function MovieInfo(props) {
     return (
-        <div>
+        <div className="movie-info">
             <br></br>
-            <Container className="movie-info">
+            <Container>
                 <Row>
                     <Col sm={6}>
                         {   // NOTE The AWS link is actually a No Image found ( image ), this will come in place if there is not image available in the API
