@@ -8,6 +8,7 @@
 import React from 'react';
 import {Container, Row} from 'react-bootstrap';
 import Actor from './Actor.js';
+import '../../styles/component.css';
 
 function ActorGrid(props) {
     return (

@@ -8,6 +8,8 @@
 import React from 'react';
 import {Container, Row} from 'react-bootstrap';
 import Movie from './Movie.js';
+import '../../styles/component.css';
+
 function MovieGrid(props) {
     return (
         <div>
