@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Introduction 
+This is a simple React JS application to fetch and display all movies and actors from TMDB API. 
+
 ## Available Scripts
 
 In the project directory, you can run:
