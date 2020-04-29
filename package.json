@@ -36,12 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "cz-emoji": "^1.2.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-emoji"
-    }
-  }
+  "devDependencies": {}
 }
