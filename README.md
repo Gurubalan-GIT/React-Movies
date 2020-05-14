@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Introduction 
+This is a Movie DB application done with React JS and TMDB (API) for data.
+
 ## Available Scripts
 
 In the project directory, you can run:
