@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Introduction 
-This is a Movie DB application done with React JS and TMDB (API) for data.
+This is a simple React JS application to fetch and display all movies and actors from TMDB API. 
 
 ## Available Scripts
 
